@@ -33,7 +33,8 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               {socialLinks.map((item) => (
                 <a
-                  href="#"
+                  key={item.icon}
+                  href={item.href}
                   className="size-12 flex items-center justify-center rounded-full bg-primary hover:bg-primary/70 cursor-pointer transition-smooth"
                 >
                   <i className={`ri-${item.icon}-fill text-xl text-white`}></i>
@@ -45,12 +46,8 @@ const Footer: React.FC = () => {
             <FooterTitle title="Categories" />
             <ul className="space-y-3">
               {categories.map((category) => (
-                <li>
-                  <FooterListItem
-                    key={category?.id}
-                    href="/"
-                    title={category?.name}
-                  />
+                <li key={category?.id}>
+                  <FooterListItem href="/" title={category?.name} />
                 </li>
               ))}
             </ul>
@@ -59,12 +56,8 @@ const Footer: React.FC = () => {
             <FooterTitle title="Help & Support" />
             <ul className="space-y-3">
               {footerItems.map((item) => (
-                <li>
-                  <FooterListItem
-                    key={slugify(item.title)}
-                    href={item.href}
-                    title={item.title}
-                  />
+                <li key={slugify(item.title)}>
+                  <FooterListItem href={item.href} title={item.title} />
                 </li>
               ))}
             </ul>
