@@ -11,7 +11,7 @@ import { HeroSectionSkeleton } from "@/features/home/components/HeroSectionSkele
 import { EventSkeleton } from "@/features/home/components/EventSkeleton"
 import { EventRowSkeleton } from "@/features/home/components/EventRowSkeleton"
 
-const Home = () => {
+const HomePage = () => {
   const { allEvents, heroEvent, featuredEvent, upcomingEvents } = useEvents()
 
   return (
@@ -53,4 +53,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage

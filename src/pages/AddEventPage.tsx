@@ -1,7 +1,7 @@
 import { EventForm } from "@/features/event/components/EventForm"
 import { Container } from "@/shared/components/container"
 
-const AddEvent = () => {
+const AddEventPage = () => {
   return (
     <Container className="py-8">
       <EventForm />
@@ -9,4 +9,4 @@ const AddEvent = () => {
   )
 }
 
-export default AddEvent
+export default AddEventPage

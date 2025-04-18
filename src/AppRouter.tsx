@@ -1,13 +1,14 @@
 import { useRoutes } from "react-router"
 
-import Home from "@/pages/Home"
-import AddEvent from "@/pages/AddEvent"
+import HomePage from "@/pages/HomePage"
+import AddEventPage from "@/pages/AddEventPage"
+import EventDetailPage from "@/pages/EventDetailPage"
 
 const AppRouter = () => {
   const routes = useRoutes([
-    { path: "/", element: <Home /> },
-    { path: "/events/:id/:name", element: <Home /> },
-    { path: "/events/create", element: <AddEvent /> },
+    { path: "/", element: <HomePage /> },
+    { path: "/events/:id/:name", element: <EventDetailPage /> },
+    { path: "/events/create", element: <AddEventPage /> },
   ])
 
   return routes

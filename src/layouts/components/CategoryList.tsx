@@ -1,4 +1,5 @@
 import { Button } from "@/shared/components/button/Button"
+import { Skeleton } from "@/shared/components/skeleton/Skeleton"
 import { useCategories } from "@/shared/hooks/useCategories"
 import { getCategoryIcon } from "@/shared/utils/categoryIcon"
 
@@ -6,7 +7,13 @@ const CategoryList: React.FC = () => {
   const { categories, loading, error } = useCategories()
 
   if (loading) {
-    return <div>Loading categories...</div>
+    return (
+      <div className="flex items-center py-2 overflow-x-auto space-x-1 ">
+        {[1, 2, 3, 4, 5, 6].map((item) => (
+          <Skeleton key={item} className="h-8 w-20 rounded-full" />
+        ))}
+      </div>
+    )
   }
 
   if (error) {
