@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Logo />
-            <nav className="ml-12 flex items-center space-x-1">
+            <nav className="ml-12 md:flex items-center space-x-1 hidden">
               <NavItem to="/" label="Events" />
               <NavItem to="/venues" label="Venues" />
               <NavItem to="/gift-cards" label="Gift Cards" />

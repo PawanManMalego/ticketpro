@@ -11,8 +11,11 @@ interface FeaturedEventCardProps {
 
 const FeaturedEventCard: React.FC<FeaturedEventCardProps> = ({ event }) => {
   return (
-    <Card bordered className="col-span-2 flex max-h-96 h-96 max-w-5xl">
-      <div className="w-1/3 relative">
+    <Card
+      bordered
+      className="col-span-2 flex flex-col md:flex-row md:h-96 max-w-5xl"
+    >
+      <div className="w-full md:w-96 h-60 md:h-96 relative">
         <img
           src={
             event?.image_url ??
@@ -48,7 +51,7 @@ const FeaturedEventCard: React.FC<FeaturedEventCardProps> = ({ event }) => {
             <p className="mt-4 leading-5 line-clamp-4">{event?.description}</p>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-8">
           <div>
             <p className="text-gray-500 text-xs">Starting from</p>
             <p className="font-semibold text-xl">${event?.price}</p>

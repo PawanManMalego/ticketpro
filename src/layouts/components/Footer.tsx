@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
   const { categories } = useCategories()
 
   return (
-    <footer className="sticky z-0 bottom-0 left-0 w-full pt-8 bg-accent flex justify-center items-center">
+    <footer className="md:sticky z-0 bottom-0 left-0 w-full pt-8 bg-accent flex justify-center items-center">
       <Container className="relative mx-auto px-4">
-        <div className="grid grid-cols-4 gap-8">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="col-span-2 md:col-auto">
             <Logo className="h-20" />
             <p className="text-gray-100 mb-6 mt-2">
               Your trusted source for event tickets worldwide
@@ -62,15 +62,15 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="col-span-2 md:col-auto">
             <FooterTitle title="Download Our App" />
             <p className="text-gray-100 mb-4">
               Get the best experience on your phone
             </p>
-            <div className="space-y-3">
+            <div className="flex md:flex-col items-start gap-4">
               <a
                 href="#"
-                className="flex items-center space-x-3 bg-white/20 px-4 py-3 rounded-lg hover:bg-white/40 cursor-pointer transition-smooth"
+                className="flex flex-1 w-full items-center space-x-3 bg-white/20 px-4 py-3 rounded-lg hover:bg-white/40 cursor-pointer transition-smooth"
               >
                 <i className="ri-apple-fill text-2xl"></i>
                 <div>
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="flex items-center space-x-3 bg-white/20 px-4 py-3 rounded-lg hover:bg-white/40 cursor-pointer transition-smooth"
+                className="flex flex-1 w-full items-center space-x-3 bg-white/20 px-4 py-3 rounded-lg hover:bg-white/40 cursor-pointer transition-smooth"
               >
                 <i className="ri-google-play-fill text-2xl"></i>
                 <div>

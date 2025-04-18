@@ -14,17 +14,14 @@ const HeroSection: React.FC<HeroEventProps> = ({ event, onCTAClick }) => {
     <section
       className="relative h-[60dvh] w-full bg-cover flex items-center"
       style={{
-        backgroundImage: `url(${
-          event?.image_url ??
-          "https://public.readdy.ai/ai/img_res/4559a71eece40737ffdce89faf530d0a.jpg"
-        })`,
+        backgroundImage: `url(${event?.image_url})`,
       }}
     >
       {/* Left gradient overlay */}
       <div className="absolute inset-0 w-3/4 bg-gradient-to-r from-black via-black/80 to-transparent" />
 
       {/* Content on top of gradient */}
-      <div className="relative z-10 pl-6 md:pl-16 pr-6 max-w-xl text-white space-y-6">
+      <div className="relative z-10 pl-6 md:pl-16 pr-6 max-w-xl text-white space-y-5">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight drop-shadow">
           {event?.name}
         </h1>

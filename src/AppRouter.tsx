@@ -6,6 +6,7 @@ import AddEvent from "@/pages/AddEvent"
 const AppRouter = () => {
   const routes = useRoutes([
     { path: "/", element: <Home /> },
+    { path: "/events/:id/:name", element: <Home /> },
     { path: "/events/create", element: <AddEvent /> },
   ])
 

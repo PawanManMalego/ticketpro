@@ -14,7 +14,7 @@ const CategoryList: React.FC = () => {
   }
 
   return (
-    <nav className="flex items-center py-2 overflow-x-auto space-x-1">
+    <nav className="flex items-center py-2 overflow-x-auto space-x-1 scrollbar-hide">
       <Button variant={"contained"} color={"primary"}>
         All Events
       </Button>

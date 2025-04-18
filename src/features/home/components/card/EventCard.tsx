@@ -19,7 +19,7 @@ const EventCard: React.FC<EventCardProps> = ({
 
   return (
     <Card
-      className="min-h-60 max-w-sm hover:cursor-pointer hover:-translate-y-2 transition-smooth"
+      className="min-h-60 max-w-lg hover:cursor-pointer hover:-translate-y-2 transition-smooth"
       onClick={handleClick}
     >
       <div className="relative">
