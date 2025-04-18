@@ -8,9 +8,13 @@ import { getCategoryIcon } from "@/shared/utils/categoryIcon"
 
 interface HighlightEventCardProps {
   event: BaseEventItemProps
+  onClick?: () => void
 }
 
-const HighlightEventCard: React.FC<HighlightEventCardProps> = ({ event }) => {
+const HighlightEventCard: React.FC<HighlightEventCardProps> = ({
+  event,
+  onClick,
+}) => {
   return (
     <EventRowCard
       title={event.name}
@@ -19,6 +23,7 @@ const HighlightEventCard: React.FC<HighlightEventCardProps> = ({ event }) => {
       endSlot={
         <div className="text-sm font-medium text-primary">${event.price}</div>
       }
+      onClick={onClick}
     />
   )
 }

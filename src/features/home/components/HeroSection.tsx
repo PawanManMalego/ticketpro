@@ -40,11 +40,7 @@ const HeroSection: React.FC<HeroEventProps> = ({ event, onCTAClick }) => {
           >
             Buy Tickets
           </Button>
-          <Button
-            variant="tonal"
-            size="large"
-            // onClick={handleClick}
-          >
+          <Button variant="tonal" size="large" onClick={onCTAClick}>
             <i className="ri-arrow-right-up-line"></i>
           </Button>
         </div>

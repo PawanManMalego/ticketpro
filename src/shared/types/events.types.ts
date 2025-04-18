@@ -1,7 +1,7 @@
 import { Category } from "@/shared/types/categories.types"
 
 export interface BaseEventItemProps {
-  id: number
+  id: string
   name: string
   location: string
   price: number

@@ -7,13 +7,18 @@ import { EventItemProps } from "@/shared/types/events.types"
 
 interface FeaturedEventCardProps {
   event: EventItemProps | null
+  onClick?: () => void
 }
 
-const FeaturedEventCard: React.FC<FeaturedEventCardProps> = ({ event }) => {
+const FeaturedEventCard: React.FC<FeaturedEventCardProps> = ({
+  event,
+  onClick,
+}) => {
   return (
     <Card
       bordered
-      className="col-span-2 flex flex-col md:flex-row md:h-96 max-w-5xl"
+      className="col-span-2 flex flex-col md:flex-row md:h-96 max-w-5xl hover:cursor-pointer"
+      onClick={onClick && onClick}
     >
       <div className="w-full md:w-96 h-60 md:h-96 relative">
         <img
@@ -56,7 +61,9 @@ const FeaturedEventCard: React.FC<FeaturedEventCardProps> = ({ event }) => {
             <p className="text-gray-500 text-xs">Starting from</p>
             <p className="font-semibold text-xl">${event?.price}</p>
           </div>
-          <Button color="primary">Buy Tickets</Button>
+          <Button color="primary" onClick={onClick && onClick}>
+            Buy Tickets
+          </Button>
         </div>
       </div>
     </Card>

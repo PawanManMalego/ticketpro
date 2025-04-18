@@ -8,6 +8,7 @@ import { createEvent } from "@/shared/services/eventService"
 
 import { ImageUploader } from "./ImageUploader"
 import { fetchCategories } from "@/shared/services/categoryService"
+import { MultiSelect } from "@/shared/components/input/MultiSelect"
 
 interface FormState {
   name: string
@@ -57,12 +58,6 @@ export const EventForm: React.FC = () => {
   ) => {
     const { name, value } = e.target
     setForm((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const options = Array.from(e.target.selectedOptions)
-    const selectedCategories = options.map((option) => option.value)
-    setForm((prev) => ({ ...prev, categories: selectedCategories }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -155,7 +150,14 @@ export const EventForm: React.FC = () => {
           <label htmlFor="categories" className="block text-sm font-medium">
             Select Categories
           </label>
-          <select
+          <MultiSelect
+            categories={categories}
+            selected={form.categories}
+            onChange={(selected) =>
+              setForm((prev) => ({ ...prev, categories: selected }))
+            }
+          />
+          {/* <select
             id="categories"
             name="categories"
             multiple
@@ -164,12 +166,12 @@ export const EventForm: React.FC = () => {
             onChange={handleCategoryChange}
           >
             {/* Assuming you have a 'categories' array from your database */}
-            {categories?.map((category) => (
+          {/* {categories?.map((category) => (
               <option key={category.id} value={category.id}>
                 {category.name}
               </option>
             ))}
-          </select>
+          </select> */}
         </div>
 
         <ImageUploader
