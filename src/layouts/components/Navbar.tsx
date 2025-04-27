@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
               <NavItem to="/" label="Events" />
               <NavItem to="/venues" label="Venues" />
               <NavItem to="/gift-cards" label="Gift Cards" />
-              <NavItem to="/help" label="Help" />
+              <NavItem to="/presentation" label="Presentation" />
             </nav>
           </div>
           <div className="flex-1 max-w-2xl mx-12 relative">
